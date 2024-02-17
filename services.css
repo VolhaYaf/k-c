@@ -1,0 +1,488 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    background-image: url(pic10.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+.sidebar {
+    position: absolute;
+    width: 100px;
+    height: 100vh;
+    background: #ffffff;
+    opacity: 0.9;
+    overflow: hidden;
+    transition: 1s;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.sidebar:hover {
+    width: 400px;
+}
+
+.sidebar ul {
+    position: relative;
+    height: 100vh;
+}
+
+.sidebar ul li {
+    list-style: none;
+}
+
+.sidebar ul li:hover {
+    background: #edebeb;
+}
+
+.sidebar ul li a {
+    position: relative;
+    display: flex;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+li img {
+    width: 60px;
+    height: 60px;
+}
+
+.sidebar ul li a .icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 60px;
+    height: 80px;
+    font-size: 1.5em;
+    margin-left: 20px;
+}
+
+.sidebar ul li a .text {
+    position: relative;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    font-size: 1.5em;
+    margin-left: 20px;
+    color: black;
+    font-family: 'Italiana', sans-serif;
+    font-weight: 600;
+}
+
+.sidebar ul li a .logo {
+    width: 219px;
+    height: 142px;
+    padding: 12px;
+    margin-bottom: 50px;
+    margin-left: 10px;
+}
+
+.social {
+    position: relative;
+    display: flex;
+    padding-left: 100px;
+    margin-top: 50px;
+}
+
+.sidebar ul li a .social-media {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.social-media {
+    width: 45px;
+    height: 45px;
+}
+
+.phone {
+    padding-left: 90px;
+}
+
+.sidebar ul li a .number {
+    position: relative;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    font-size: 1.5em;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+}
+
+.card {
+	display: flex;
+	justify-content: center;
+    align-items: center;
+}
+
+.flip-card {
+	background-color: #FFFFFF;
+	width: 500px;
+	height: 350px;
+	border: none;
+	perspective: 1000px;
+    margin: 20px;
+}
+
+.flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 1.5s;
+	transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+	transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.flip-card-back {
+	background-color: #edebeb;
+	transform: rotateY(180deg);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+    padding: 20px;
+}
+
+.picture {
+    width: 500px;
+    height: 350px;
+}
+
+h3 {
+	color: #000;
+	font-size: 22px;
+    padding-bottom: 20px;
+    font-family: 'Italiana', sans-serif;
+}
+
+.text-back {
+	color: #000;
+	font-size: 18px;
+    text-align: justify;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+
+@media all and (max-width: 920px) {
+    body {
+        background-image: none;
+        background-color: #FFFFFF;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sidebar {
+        min-height: 230%;
+        z-index: 1;
+        position: fixed;
+    }
+}
+
+
+@media all and (max-width: 768px) {
+    .sidebar {
+        min-height: 155%;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .sidebar {
+        min-height: 100%;
+        position: fixed;
+    }
+
+    .sidebar:hover {
+        width: 100%;
+    }
+
+    .sidebar ul li a .logo {
+        margin-bottom: 30px;
+    }
+    
+    .social {
+        margin-top: 30px;
+    }
+
+    .flip-card {
+        width: 400px;
+        height: 300px;
+        margin: 10px;
+    }
+
+    .picture {
+        width: 400px;
+        height: 310px;
+    }
+
+    h3 {
+        font-size: 16px;
+        padding-bottom: 10px;
+        margin-left: 40px;
+    }
+    
+    .text-back {
+        font-size: 13px;
+        margin-left: 80px;
+    }
+    
+}
+
+
+
+@media all and (max-width: 400px) {
+    .sidebar {
+        min-height: 170%;
+        z-index: 1;
+        position: fixed;
+    }
+    
+    h3 {
+        font-size: 16px;
+        padding-bottom: 5px;
+        margin-left: 30%;
+    }
+    
+    .text-back {
+        font-size: 13px;
+        margin-left: 25%;
+    }
+}
+
+
+
+
+@media all and (max-width: 380px) {
+    .sidebar {
+        width: 85px;
+    }
+
+    .sidebar ul li a .logo {
+            margin-bottom: 10px;
+        }
+        
+        .social {
+            margin-top: 10px;
+        }
+        
+        li img {
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sidebar ul li a .icon {
+            min-width: 40px;
+            height: 60px;
+        }
+        
+        .sidebar ul li a .text {
+            font-size: 1.2em;
+            margin-left: 30px;
+        }
+        
+        .social-media {
+            width: 40px;
+            height: 40px;
+        }
+        
+        .sidebar ul li a .number {
+            font-size: 1.2em;
+        }
+
+    .flip-card {
+        width: 300px;
+        height: 220px;
+    }
+
+    .flip-card-back {
+        padding: 7px;
+    }
+
+    .picture {
+        width: 300px;
+        height: 220px;
+    }
+
+    h3 {
+        font-size: 14px;
+        padding-bottom: 5px;
+        margin-left: 25%;
+    }
+    
+    .text-back {
+        font-size: 10px;
+        margin-left: 20%;
+        padding: 0px;
+    }
+}
+
+
+
+@media (max-width: 1180px) and (orientation: landscape) {
+    .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.8%;
+        padding-left: 8%;
+    }
+}
+
+
+
+@media (max-width: 1140px) and (orientation: landscape) {
+    .sidebar {
+        min-height: 200%;
+        z-index: 1;
+        position: fixed;
+    }
+    
+    .sidebar ul li a .logo {
+        margin-bottom: 30px;
+    }
+    
+    .social {
+        margin-top: 30px;
+    }
+
+    .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1.5%;
+    }
+    
+    .flip-card {
+        width: 430px;
+        height: 300px;
+        margin: 10px;
+    }
+    
+    .flip-card-back {
+        padding: 10px;
+    }
+    
+    .picture {
+        width: 430px;
+        height: 300px;
+    }
+    
+    h3 {
+        font-size: 20px;
+        padding-bottom: 10px;
+
+    }
+    
+    .text-back {
+        font-size: 16px;
+    }
+}
+
+
+
+@media (max-width: 1024px) and (orientation: landscape) {
+    .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2%;
+        padding-left: 6%;
+    }
+}
+
+
+
+
+@media (width: 932px) and (orientation: landscape){
+    body {
+        background-image: none;
+        background-color: #FFFFFF;
+    }
+
+    .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+}
+
+
+
+@media (max-width: 940px) and (orientation: landscape){
+    .sidebar {
+        min-height: 250%;
+        z-index: 1;
+        position: absolute;
+    }
+}
+
+
+@media (max-width: 720px) and (orientation: landscape) {
+     .sidebar {
+        min-height: 200%;
+        z-index: 1;
+        width: 85px;
+    }
+
+    li img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .sidebar ul li a .icon {
+        min-width: 40px;
+        height: 60px;
+    }
+    
+    .sidebar ul li a .text {
+        font-size: 1.2em;
+        margin-left: 30px;
+    }
+
+    .sidebar ul li a .logo {
+        width: 200px;
+        height: 125px;
+        margin-bottom: 10px;
+    }
+    
+    .social {
+        margin-top: 10px;
+    }
+
+    .social-media {
+        width: 40px;
+        height: 40px;
+    }
+
+    .sidebar ul li a .number {
+        font-size: 1em;
+    }
+}
